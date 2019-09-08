@@ -34,5 +34,10 @@ public static WebDriver driver;
 		driver.findElement(By.id("u_0_2")).click();
 		
 	}
+	
+//close current browser window
+	public void close() {
+		driver.close();
+	}
 
 }
