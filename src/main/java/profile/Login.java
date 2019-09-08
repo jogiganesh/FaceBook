@@ -13,6 +13,7 @@ public class Login {
 public static WebDriver driver;
 	
 	@Given("^valid url$")
+	//give valid url
 	public void url() throws Exception{
 		System.setProperty("webdriver.chrome.driver","F:\\Prasanna\\chromedriver.exe");
 		driver=new ChromeDriver();
@@ -20,12 +21,14 @@ public static WebDriver driver;
 		
 		
 	}
+	// enter valid credentials
 	@When("^valid id & pass$")
 	public void credintials() throws Exception {
 		driver.findElement(By.name("email")).sendKeys("kumarklr5@gmailcom");
 		driver.findElement(By.name("pass")).sendKeys("KUMAR@0302");
 		
 	}
+	// click on ogin
 	@Then("^click on liogin$")
 	public void login() throws Exception {
 		driver.findElement(By.id("u_0_2")).click();
